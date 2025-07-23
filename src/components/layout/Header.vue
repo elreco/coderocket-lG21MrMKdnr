@@ -6,17 +6,24 @@
       </router-link>
       
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-8">
-        <router-link 
-          v-for="item in navItems" 
-          :key="item.path" 
-          :to="item.path"
-          class="text-gray-600 hover:text-primary font-medium transition-colors"
-          :class="{ 'text-primary': isActive(item.path) }"
-        >
-          {{ item.name }}
-        </router-link>
-      </nav>
+      <div class="hidden md:flex items-center">
+        <nav class="flex space-x-8 mr-6">
+          <router-link 
+            v-for="item in navItems" 
+            :key="item.path" 
+            :to="item.path"
+            class="text-gray-600 hover:text-primary font-medium transition-colors"
+            :class="{ 'text-primary': isActive(item.path) }"
+          >
+            {{ item.name }}
+          </router-link>
+        </nav>
+        
+        <Button variant="outline" size="sm" class="mr-2">
+          <UserIcon class="h-4 w-4 mr-2" />
+          Login
+        </Button>
+      </div>
       
       <!-- Mobile Navigation Toggle -->
       <Button 
@@ -47,6 +54,11 @@
           >
             {{ item.name }}
           </router-link>
+          
+          <Button variant="outline" class="w-full mt-4">
+            <UserIcon class="h-4 w-4 mr-2" />
+            Login
+          </Button>
         </div>
       </div>
     </div>
@@ -57,7 +69,7 @@
 import { ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-vue-next';
+import { Menu, X, UserIcon } from 'lucide-vue-next';
 
 const route = useRoute();
 const isMenuOpen = ref(false);

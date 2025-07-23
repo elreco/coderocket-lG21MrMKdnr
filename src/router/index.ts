@@ -5,6 +5,7 @@ import ServicesPage from '@/pages/ServicesPage.vue'
 import CaseStudiesPage from '@/pages/CaseStudiesPage.vue'
 import InsightsPage from '@/pages/InsightsPage.vue'
 import ContactPage from '@/pages/ContactPage.vue'
+import LoginPage from '@/pages/LoginPage.vue'
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: ContactPage
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: LoginPage
   }
 ]
 

@@ -4,7 +4,7 @@ import { buttonVariants } from ".";
 import { cn } from "@/lib/utils";
 import { type VariantProps } from "class-variance-authority";
 
-interface ButtonProps extends VariantProps<typeof buttonVariants> {
+interface ButtonProps extends /* @vue-ignore */ VariantProps<typeof buttonVariants> {
   type?: "button" | "submit" | "reset";
 }
 

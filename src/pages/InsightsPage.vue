@@ -188,7 +188,7 @@ const articles = [
   {
     id: '6',
     title: 'XYZDEFG Named Top AI Solutions Provider for 2023',
-    excerpt: 'We're proud to announce our recognition as a leading AI solutions provider in the industry.',
+    excerpt: 'We\'re proud to announce our recognition as a leading AI solutions provider in the industry.',
     image: 'https://picsum.photos/id/160/800/600',
     category: 'Company News',
     date: 'February 28, 2023',
